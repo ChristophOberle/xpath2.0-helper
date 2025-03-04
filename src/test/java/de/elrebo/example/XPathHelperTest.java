@@ -1,5 +1,7 @@
-package de.elrebo;
+package de.elrebo.example;
 
+import de.elrebo.XPathHelper;
+import de.elrebo.XmlDocumentHelper;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
@@ -58,7 +60,8 @@ public class XPathHelperTest
                     processor,
                     new String[][] { {"fn", "http://www.w3.org/2005/xpath-functions"} },
                     new String[][] { {"bankCode", "string" }, {"asOfDate", "string"} },
-                    "/file/bankCode[@id=$bankCode and fn:compare(validFrom, $asOfDate) <= 0 and fn:compare(validTo, $asOfDate) >= 0]/calculationMethod"
+                    "/file/bankCode[@id=$bankCode and fn:compare(validFrom, $asOfDate) <= 0 and " +
+                            "fn:compare(validTo, $asOfDate) >= 0]/calculationMethod"
             );
 
             String bankCode = "50010517";
