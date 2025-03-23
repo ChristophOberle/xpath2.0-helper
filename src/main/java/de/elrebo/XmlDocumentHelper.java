@@ -11,19 +11,17 @@ import java.io.File;
 import java.io.IOException;
 
 /**
- * XmlDocumentHelper
- *
  * Class XmlDocumentHelper simplifies Access to XML documents from Java programs.
  * It prepares any XML document as XdmNode.
- *
+ * <p>
  * Copyright 2025 Christoph Oberle
- *
+ * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- *
+ * <p>
  *     http://www.apache.org/licenses/LICENSE-2.0
- *
+ * <p>
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -32,10 +30,18 @@ import java.io.IOException;
  */
 public class XmlDocumentHelper {
 
-    // prepared XML document
+    /**
+     * prepared XML document
+     * an XdmNode containing the prepared XML file
+     */
     private final XdmNode xdmNode;
 
-    // Constructor from filePath
+    /**
+     * Constructor from filePath
+     * @param processor the instance of the Saxon processor
+     * @param filePath the filename incl. path to the XML document
+     * @throws SaxonApiException if the file can not be prepared as an XdmNode
+     */
     public XmlDocumentHelper(Processor processor, String filePath) throws SaxonApiException {
         // create an XdmNode document from file <pathname>
         File file = new File(filePath);
@@ -57,7 +63,10 @@ public class XmlDocumentHelper {
         xdmNode = builder.wrap(doc);
     }
 
-    // return the XML document as an XdmNode
+    /**
+     * return the XML document as an XdmNode
+     * @return the XdmNode of the XML document
+     */
     public XdmNode asXdmNode() {
         return xdmNode;
     }
