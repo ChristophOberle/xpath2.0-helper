@@ -4,7 +4,7 @@
 
   <groupId>de.elrebo</groupId>
   <artifactId>xpath2.0-helper</artifactId>
-  <version>1.0</version>
+  <version>1.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <!-- * Copyright 2025 Christoph Oberle
@@ -24,7 +24,7 @@
 
   <name>${project.groupId}:${project.artifactId}</name>
   <description>xpath2.0-helper simplifies the use of XPath2.0 to navigate an XML document from Java</description>
-  <url>https://www.elrebo.de/xpath2.0-helper</url>
+  <url>https://elrebo.de/index.php/2025/03/21/xpath2-0-helper/</url>
 
   <licenses>
     <license>
